@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.1"
   }
 }
