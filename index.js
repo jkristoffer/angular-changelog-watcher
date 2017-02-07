@@ -14,7 +14,6 @@ module.exports = function( didChange ) {
       hash.end();
       getCurrentChecksum( str => {
          const h = hash.read();
-         console.log(h);
          if(h !== str) {
             writeNewChecksum(h);
             didChange(true);
@@ -30,7 +29,6 @@ module.exports = function( didChange ) {
 function getCurrentChecksum(callback){
    fs.readFile(cksum, 'utf8', (err,data) => {
       if(err) console.error(data);
-      console.log(data);
       callback(data);
    });
 }
